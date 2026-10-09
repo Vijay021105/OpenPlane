@@ -1,0 +1,39 @@
+openPLANE — START HERE
+
+1) Install Python 3.10 or newer.
+
+2) Windows:
+      double-click setup_windows.bat
+   then:
+      double-click run_openplane.bat
+
+   Linux/macOS:
+      ./setup_linux_mac.sh
+      ./run_openplane.sh
+
+3) The app runs without OpenVSP using its analytical design backend.
+
+4) To add OpenVSP:
+      put the COMPLETE OpenVSP distribution/build under:
+          third_party/openvsp/OpenVSP/
+
+      or set:
+          VSP_PYTHONPATH=<folder containing the OpenVSP Python API>
+
+   Test it:
+      python tools/check_openvsp.py
+
+5) Detailed OpenVSP instructions:
+      docs/OPENVSP_SETUP.md
+
+6) Example project:
+      examples/Reference_Electric_Trainer.oplane
+
+7) Run tests:
+      python -m unittest discover -s tests -v
+
+8) New geometry outputs in v0.2.0:
+      File > Export Aircraft Dimensions (CSV)...
+      File > Export Scaled Three-View (PNG/PDF)...
+      View > Open Scaled Three-View
+      Three-View tab in the analysis workspace
